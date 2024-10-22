@@ -1,0 +1,44 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Chat bot hỗ trợ người dùng tư vấn về ý tưởng vẽ áo.";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div id="chatBox">
+    <iframe title="G5"
+            src="https://4b4mvxpyvzsn539d3mtr8.ai.copilot.live"
+            style="border:none;"
+            loading="lazy"
+            allow="microphone;camera;speaker;clipboard-read;clipboard-write;geolocation;"
+            width="100%"
+            height="100%"></iframe>
+</div>
+
+<style>
+    /* Đặt chiều cao của trang */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Giới hạn chiều cao của #chatBox để không che thanh header */
+    #chatBox {
+        width: 100%;
+        height: 70vh; /* Chiếm 70% chiều cao của viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px; /* Khoảng cách với thanh header */
+    }
+
+    /* Đảm bảo iframe không tràn khỏi khung chat */
+    iframe {
+        width: 90%; /* Chiếm 90% chiều rộng của màn hình */
+        height: 100%;
+        max-width: 1200px; /* Đặt giới hạn chiều rộng tối đa */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng bóng đổ nhẹ */
+    }
+</style>
